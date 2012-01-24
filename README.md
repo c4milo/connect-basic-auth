@@ -18,7 +18,13 @@ var express = require('express');
 
 var app = express.createServer();
 app.use(basicAuth(function(credentials, req, res, next) {
-  
+  /**
+   * Credentials has the following structure: 
+   * {
+   *   username: 'c4milo'
+   *   password: 'lepassword'
+   * }
+   **/
   Account.authenticate(credentials, function(error) {
     next(error);
   });
