@@ -1,16 +1,16 @@
-##Flexible HTTP Basic Authentication for Connect Framework.
+#Flexible HTTP Basic Authentication for Connect Framework.
 
-### Why
+## Why
 This project came to live due to the lack of flexibility of the existent middlewares, specially 
 when developing RESTful APIs.
 
-### Features
+## Features
 * Easy to use
 * Asynchronous
 * Gives you access to the request and response objects from your authentication callback.
 * Lets you send a custom response body along with the Authorization Required header. Useful for RESTful APIs.
 
-### How to use
+## How to use
 
 ```javascript
 var basicAuth = require('connect-basic-auth');
@@ -48,7 +48,7 @@ app.get('/accounts/:username', function(req, res, next) {
 
 ```
 
-### License
+## License
 (The MIT License)
 
 Copyright 2012 Camilo Aguilar. All rights reserved.
