@@ -1,0 +1,11 @@
+{
+    "name": "connect-basic-auth",
+    "description": "Flexible HTTP basic authentication for Connect framework.",
+    "version": "0.0.1",
+    "author": "Camilo Aguilar",
+    "keywords" : [ "authentication", "auth", "basic", "http", "flexible", "connect"],
+    "repository": "git://github.com/c4milo/connect-basic-auth",
+    "engines": {
+        "node": "0.4.x || 0.6.x"
+    }
+}
