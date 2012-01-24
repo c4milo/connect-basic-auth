@@ -1,6 +1,7 @@
-module.exports = function(callback, realm) {
-    if(!callback || typeof callback != function) {
-        throw new Error('You must provide a function callback as the first parameter');
+module.exports = function (callback, realm) {
+    if (!callback || typeof callback != 'function') {
+        throw new Error('You must provide a function ' +
+        'callback as the first parameter');
     }
 
     realm = realm ? realm : 'Authorization required.';
@@ -24,7 +25,9 @@ module.exports = function(callback, realm) {
             var parts = authorization.split(' ');
             var scheme = parts[0];
             if ('Basic' != scheme) {
-                return next(new Error('Authorization header does not have the correct scheme. \'Basic\' scheme was expected.'));
+                return next(new Error('Authorization header ' +
+                'does not have the correct scheme. \'Basic\' ' +
+                'scheme was expected.'));
             }
 
             var _credentials = new Buffer(parts[1], 'base64').toString().split(':');
@@ -33,7 +36,7 @@ module.exports = function(callback, realm) {
                                 password: _credentials[1] };
 
             callback(credentials, req, res, function(err) {
-                if(err) {
+                if (err) {
                     unauthorized(res);
                     next(err);
                     return;
@@ -46,3 +49,4 @@ module.exports = function(callback, realm) {
         next();
     };
 };
+
