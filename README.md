@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/c4milo/connect-basic-auth.png)](http://travis-ci.org/c4milo/connect-basic-auth)
 #Flexible HTTP Basic Authentication for Connect Framework.
 
 ## Why
